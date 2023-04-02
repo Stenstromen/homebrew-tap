@@ -5,20 +5,20 @@
 class Gomtastsflare < Formula
   desc "Go binary for creating/updating MTA-STS records on Cloudflare, and create the accompanying Nginx configuration."
   homepage "https://github.com/Stenstromen/gomtastsflare"
-  version "1.0.1"
+  version "1.1.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Stenstromen/gomtastsflare/releases/download/v1.0.1/gomtastsflare_1.0.1_Darwin_arm64.tar.gz"
-      sha256 "a957dc7869d8b84a89d8a8af596b88ac76c6ccc7d04a36d9ef8d4e89a1bc61cb"
+    if Hardware::CPU.intel?
+      url "https://github.com/Stenstromen/gomtastsflare/releases/download/v1.1.0/gomtastsflare_1.1.0_Darwin_x86_64.tar.gz"
+      sha256 "fefa38caa81a5ca8c8b13ddb182f1c579eac837bbefa3a71e467a33cbdc191e5"
 
       def install
         bin.install "gomtastsflare"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/gomtastsflare/releases/download/v1.0.1/gomtastsflare_1.0.1_Darwin_x86_64.tar.gz"
-      sha256 "ebaba080e74d2fdff3b1ec7370fbe92f42dbec4c7414a5e7ca9b03314bffd0b9"
+    if Hardware::CPU.arm?
+      url "https://github.com/Stenstromen/gomtastsflare/releases/download/v1.1.0/gomtastsflare_1.1.0_Darwin_arm64.tar.gz"
+      sha256 "1b8b3ffa3d2cc35a75ad8ec9faec7e2b1c3d7d91883842e30d216abb1782c657"
 
       def install
         bin.install "gomtastsflare"
@@ -27,17 +27,17 @@ class Gomtastsflare < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Stenstromen/gomtastsflare/releases/download/v1.0.1/gomtastsflare_1.0.1_Linux_arm64.tar.gz"
-      sha256 "c8167b0f84e06bb755c36cc94a3a327783786c43e50ca67b85411438b0433543"
+    if Hardware::CPU.intel?
+      url "https://github.com/Stenstromen/gomtastsflare/releases/download/v1.1.0/gomtastsflare_1.1.0_Linux_x86_64.tar.gz"
+      sha256 "035432512d65e8d1b70e2b8c99792a26129779e2de71bfeaca7ec3aaa13e4a27"
 
       def install
         bin.install "gomtastsflare"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/gomtastsflare/releases/download/v1.0.1/gomtastsflare_1.0.1_Linux_x86_64.tar.gz"
-      sha256 "03d77a8ca45a97d8f614b5417e6f04c53649ef7e30d189c728cce4e500f82eec"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Stenstromen/gomtastsflare/releases/download/v1.1.0/gomtastsflare_1.1.0_Linux_arm64.tar.gz"
+      sha256 "e5bb5198da582980835895698a9e1e24f20e4d3135b444b100173876bcf20ad1"
 
       def install
         bin.install "gomtastsflare"
