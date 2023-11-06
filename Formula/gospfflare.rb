@@ -5,20 +5,20 @@
 class Gospfflare < Formula
   desc "Go binary for updating TLSA DANE record on cloudflare from x509 Certificate"
   homepage "https://github.com/Stenstromen/gospfflare"
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/gospfflare/releases/download/v1.0.1/gospfflare_1.0.1_Darwin_x86_64.tar.gz"
-      sha256 "84e388f0cc4cbe1b219c0960f69b0d6428c7ba5af9ac529063c5beeadb78384f"
+    if Hardware::CPU.arm?
+      url "https://github.com/Stenstromen/gospfflare/releases/download/v1.0.2/gospfflare_Darwin_arm64.tar.gz"
+      sha256 "96f1d218f9cb9a1871df0d13ff1593c737c68a6be5ad86245ac60e0d5a4770ae"
 
       def install
         bin.install "gospfflare"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Stenstromen/gospfflare/releases/download/v1.0.1/gospfflare_1.0.1_Darwin_arm64.tar.gz"
-      sha256 "8fd6770493b078e1bb531a6546c911313b48dbdb10c8da50764404e881252fbd"
+    if Hardware::CPU.intel?
+      url "https://github.com/Stenstromen/gospfflare/releases/download/v1.0.2/gospfflare_Darwin_x86_64.tar.gz"
+      sha256 "1d927739d4be1a7a23c00bfaff8ff2ef8a08e87c3673004c340326faf6c1306e"
 
       def install
         bin.install "gospfflare"
@@ -28,16 +28,16 @@ class Gospfflare < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/gospfflare/releases/download/v1.0.1/gospfflare_1.0.1_Linux_x86_64.tar.gz"
-      sha256 "8bbf0c29be16d1686f7b4b8af5d9b7f6c1a93121eaff8878246c70d5f363aba1"
+      url "https://github.com/Stenstromen/gospfflare/releases/download/v1.0.2/gospfflare_Linux_x86_64.tar.gz"
+      sha256 "2eca218e2929a1964552d8992e6b61df8e81b862164a8ffd10293ce1900881e2"
 
       def install
         bin.install "gospfflare"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Stenstromen/gospfflare/releases/download/v1.0.1/gospfflare_1.0.1_Linux_arm64.tar.gz"
-      sha256 "e91d31a71e1a81b5d9925dd2401e74cfa6a976be04d8d58a073b7e50d1dad682"
+      url "https://github.com/Stenstromen/gospfflare/releases/download/v1.0.2/gospfflare_Linux_arm64.tar.gz"
+      sha256 "139f8eb5c90941715b23f961f9be325b96838b542c1a33648efdc98c6fcbc1f0"
 
       def install
         bin.install "gospfflare"
