@@ -5,20 +5,20 @@
 class Ncregistry < Formula
   desc "The NcRegistry Go binary is a powerful command-line tool designed to streamline interaction with Docker registries"
   homepage "https://github.com/Stenstromen/ncregistry"
-  version "1.0.0"
+  version "1.0.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/ncregistry/releases/download/v1.0.0/ncregistry_Darwin_x86_64.tar.gz"
-      sha256 "c40f62232e136779b05c28daaba5728c992f4ebc0a4b5b2286db1e853d3425eb"
+    if Hardware::CPU.arm?
+      url "https://github.com/Stenstromen/ncregistry/releases/download/v1.0.1/ncregistry_Darwin_arm64.tar.gz"
+      sha256 "3d512d356abdf26b318c292b9ee60b9e41676e0a08d4f0aa7a071b4fd646b0f6"
 
       def install
         bin.install "ncregistry"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Stenstromen/ncregistry/releases/download/v1.0.0/ncregistry_Darwin_arm64.tar.gz"
-      sha256 "c215f2ed6deda50ba110fba366e1251b418c3df8f41c4bbb86f4851add80e039"
+    if Hardware::CPU.intel?
+      url "https://github.com/Stenstromen/ncregistry/releases/download/v1.0.1/ncregistry_Darwin_x86_64.tar.gz"
+      sha256 "63f64f4a26d09071072b738f56aff7979f37ab7a05dc903f1571b862f5577e77"
 
       def install
         bin.install "ncregistry"
@@ -27,17 +27,17 @@ class Ncregistry < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/ncregistry/releases/download/v1.0.0/ncregistry_Linux_x86_64.tar.gz"
-      sha256 "c3528c188ae5d9fef34977c281253853822944e73e6f958f82f01c4485f8e752"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Stenstromen/ncregistry/releases/download/v1.0.1/ncregistry_Linux_arm64.tar.gz"
+      sha256 "50ccd4b08cb3ee323cc8c2bd2f09345fdf5fc1fc8359915c0999542ec2f2d235"
 
       def install
         bin.install "ncregistry"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Stenstromen/ncregistry/releases/download/v1.0.0/ncregistry_Linux_arm64.tar.gz"
-      sha256 "f64933dba23df78358b05245506f5647b2ac77c3a8825c9736e2622b925ed343"
+    if Hardware::CPU.intel?
+      url "https://github.com/Stenstromen/ncregistry/releases/download/v1.0.1/ncregistry_Linux_x86_64.tar.gz"
+      sha256 "66840f86699a952b0dea101cb767eed46978d43ae31e7dcdf3101635b3fbe212"
 
       def install
         bin.install "ncregistry"
