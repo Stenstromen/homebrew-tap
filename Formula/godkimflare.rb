@@ -5,20 +5,20 @@
 class Godkimflare < Formula
   desc "Go binary for creating/updating DKIM records on Cloudflare."
   homepage "https://github.com/Stenstromen/godkimflare"
-  version "1.1.0"
+  version "1.1.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/godkimflare/releases/download/v1.1.0/godkimflare_1.1.0_Darwin_x86_64.tar.gz"
-      sha256 "93ca15d6f2c226ea715cfd05939a63f10b828c671260d6410b2c24b1037803d4"
+    if Hardware::CPU.arm?
+      url "https://github.com/Stenstromen/godkimflare/releases/download/v1.1.1/godkimflare_Darwin_arm64.tar.gz"
+      sha256 "5b2c7e071f0cb7ec9357fb90895f3a29699c4e082d0fafa037aba5fa40181b3b"
 
       def install
         bin.install "godkimflare"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Stenstromen/godkimflare/releases/download/v1.1.0/godkimflare_1.1.0_Darwin_arm64.tar.gz"
-      sha256 "300b28af69ffd35f9c3464e16f970a89b9dc3980c25e9cf9d240c2fd14681914"
+    if Hardware::CPU.intel?
+      url "https://github.com/Stenstromen/godkimflare/releases/download/v1.1.1/godkimflare_Darwin_x86_64.tar.gz"
+      sha256 "df13557c3db3327fabc21b31eb9976de1b0672bc684b9c7e3c591d7bb7a6742e"
 
       def install
         bin.install "godkimflare"
@@ -27,17 +27,17 @@ class Godkimflare < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/godkimflare/releases/download/v1.1.0/godkimflare_1.1.0_Linux_x86_64.tar.gz"
-      sha256 "a4a7caeb982b840d4f0608037c511c0497ed7fb6397b32cfcbd14e35c107e569"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Stenstromen/godkimflare/releases/download/v1.1.1/godkimflare_Linux_arm64.tar.gz"
+      sha256 "d35603d0f90ba1fe6afb5ab6a8b8e8fd72bb2a6075d30c7abd546084515aa699"
 
       def install
         bin.install "godkimflare"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Stenstromen/godkimflare/releases/download/v1.1.0/godkimflare_1.1.0_Linux_arm64.tar.gz"
-      sha256 "9dcb47cae3f43f05b23abf0590e950c007e54ff6e01a55d16d00535ef511d940"
+    if Hardware::CPU.intel?
+      url "https://github.com/Stenstromen/godkimflare/releases/download/v1.1.1/godkimflare_Linux_x86_64.tar.gz"
+      sha256 "b12656dcb71821467ca23ec70a44a23e706997e34748d81b2ff2cab5f3549654"
 
       def install
         bin.install "godkimflare"
