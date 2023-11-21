@@ -1,5 +1,5 @@
 # Manually generated homebrew formula for khaossweeper
-class khaossweeper < Formula
+class Khaossweeper < Formula
   desc "KhaosSweeper, A thrilling Kubernetes minesweeper game."
   homepage "https://github.com/Stenstromen/khaossweeper"
   version "1.0.1"
