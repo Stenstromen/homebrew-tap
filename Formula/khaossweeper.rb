@@ -12,6 +12,11 @@ class Khaossweeper < Formula
       def install
         bin.install "khaossweeper"
       end
+
+      test do
+        assert_match "Usage:", shell_output("#{bin}/khaossweeper -h 2>&1")
+      end
+
     end
     if Hardware::CPU.intel?
       url "https://github.com/Stenstromen/khaossweeper/releases/download/v1.0.0/khaossweeper_Darwin_x86_64.tar.gz"
@@ -19,6 +24,10 @@ class Khaossweeper < Formula
 
       def install
         bin.install "khaossweeper"
+      end
+
+      test do
+        assert_match "Usage:", shell_output("#{bin}/khaossweeper -h 2>&1")
       end
     end
   end
@@ -31,6 +40,10 @@ class Khaossweeper < Formula
       def install
         bin.install "khaossweeper"
       end
+
+      test do
+        assert_match "Usage:", shell_output("#{bin}/khaossweeper -h 2>&1")
+      end
     end
     if Hardware::CPU.intel?
       url "https://github.com/Stenstromen/khaossweeper/releases/download/v1.0.0/khaossweeper_Linux_x86_64.tar.gz"
@@ -38,6 +51,10 @@ class Khaossweeper < Formula
 
       def install
         bin.install "khaossweeper"
+      end
+
+      test do
+        assert_match "Usage:", shell_output("#{bin}/khaossweeper -h 2>&1")
       end
     end
   end
