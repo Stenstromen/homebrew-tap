@@ -1,6 +1,6 @@
 # typed: false
 # frozen_string_literal: true
-class non < Formula
+class Non < Formula
   desc "Simple line break and carriage return remover"
   homepage "https://github.com/Stenstromen/non"
   version "v1.0.0"
