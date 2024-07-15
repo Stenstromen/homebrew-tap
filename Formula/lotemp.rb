@@ -1,6 +1,6 @@
 # typed: false
 # frozen_string_literal: true
-class lotemp < Formula
+class Lotemp < Formula
   desc "Fetch Current Local Outside Temperature In the Terminal"
   homepage "https://github.com/Stenstromen/lotemp"
   version "v1.0.0"
