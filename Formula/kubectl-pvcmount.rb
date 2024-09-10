@@ -10,7 +10,7 @@ class KubectlPvcmount < Formula
   on_macos do
     on_intel do
       url "https://github.com/Stenstromen/kubectl-pvcmount/releases/download/v1.0.0/kubectl-pvcmount_Darwin_x86_64.tar.gz"
-      sha256 "212de03db18b246bd271dbe86e19e711613dbf0d6e51369da72295f082abb0dd"
+      sha256 "30a280d76193c3d84e69ec83032648461d71e8ff01dd55e2775c64cf6b7ddcd9"
 
       def install
         bin.install "kubectl-pvcmount"
@@ -18,7 +18,7 @@ class KubectlPvcmount < Formula
     end
     on_arm do
       url "https://github.com/Stenstromen/kubectl-pvcmount/releases/download/v1.0.0/kubectl-pvcmount_Darwin_arm64.tar.gz"
-      sha256 "1c30b49bc15c7d45d29a8db66479e954c50c3d31684ed9470cf4fba61d1ddc1a"
+      sha256 "0a321e38407cad80316eecf7736b20505970637eddf704ca70b8f90c964c0ed7"
 
       def install
         bin.install "kubectl-pvcmount"
@@ -30,7 +30,7 @@ class KubectlPvcmount < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/Stenstromen/kubectl-pvcmount/releases/download/v1.0.0/kubectl-pvcmount_Linux_x86_64.tar.gz"
-        sha256 "5dbb1c9124cc10fac46c4ade2618135d39c7c58c1d4c62e12708736a91d55283"
+        sha256 "906ac87e3fb8b77314b2da6b201886ebaf0619bb8008d5bc7a136f78ed0cfa6f"
 
         def install
           bin.install "kubectl-pvcmount"
@@ -40,7 +40,7 @@ class KubectlPvcmount < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/Stenstromen/kubectl-pvcmount/releases/download/v1.0.0/kubectl-pvcmount_Linux_arm64.tar.gz"
-        sha256 "9cf080836166a8963018c21848cc1d19d94a5f1f2cdb54013d73654546404019"
+        sha256 "6a0431ef35dfeee699e8e1747524514fc12940de72e095f6cf3d0833df74dfdb"
 
         def install
           bin.install "kubectl-pvcmount"
