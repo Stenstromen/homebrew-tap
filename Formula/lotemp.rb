@@ -3,20 +3,20 @@
 class Lotemp < Formula
   desc "Fetch Current Local Outside Temperature In the Terminal"
   homepage "https://github.com/Stenstromen/lotemp"
-  version "v1.0.1"
+  version "v1.0.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Stenstromen/lotemp/releases/download/v1.0.1/lotemp_Darwin_arm64.tar.gz"
-      sha256 "fabd191a28429d43b8f16766a5567f11c4ffc471176eeab9c5e00fe202807855"
+      url "https://github.com/Stenstromen/lotemp/releases/download/v1.0.2/lotemp_Darwin_arm64.tar.gz"
+      sha256 "2c7588bc30a28570ef9cb38b98276ec97eb90d5659a3cf91ed84333e1789b94e"
 
       def install
         bin.install "lotemp"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/lotemp/releases/download/v1.0.1/lotemp_Darwin_x86_64.tar.gz"
-      sha256 "9d05fd6fbdd3a814a9ff80ef6b14d1e82a3c018af48e2ace6d8f159b9c8f7193"
+      url "https://github.com/Stenstromen/lotemp/releases/download/v1.0.2/lotemp_Darwin_x86_64.tar.gz"
+      sha256 "5c18813484c3108f93e5ef56d7d6a3d09d7fa03cff48bd0d4ec8562b09cb1b9f"
 
       def install
         bin.install "lotemp"
@@ -27,7 +27,7 @@ class Lotemp < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Stenstromen/lotemp/releases/download/v1.0.1/lotemp_Linux_arm64.tar.gz"
+      url "https://github.com/Stenstromen/lotemp/releases/download/v1.0.2/lotemp_Linux_arm64.tar.gz"
       sha256 ""
 
       def install
@@ -35,8 +35,8 @@ class Lotemp < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/lotemp/releases/download/v1.0.1/lotemp_Linux_x86_64.tar.gz"
-      sha256 "41c84a53bfe00b63179840bb39ada070c09c7efb32be2853beafe4415cbfbab9"
+      url "https://github.com/Stenstromen/lotemp/releases/download/v1.0.2/lotemp_Linux_x86_64.tar.gz"
+      sha256 "65db7a4f7cb672a109ab0bd558ba817a67023d13170923ec31502df175956609"
 
       def install
         bin.install "lotemp"
