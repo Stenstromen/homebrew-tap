@@ -10,7 +10,7 @@ class Gotlsaflare < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Stenstromen/gotlsaflare/releases/download/v2.7.0-test.2/gotlsaflare_Darwin_x86_64.tar.gz"
-      sha256 "4ce5fdd30fd2dae75f16c47471f859157d71a51ca28763ebe722d5253dab4858"
+      sha256 "fe78187fe6a9d0f0a28de3cff87039a6b35ea6802cf55651f256cdcad93ba809"
 
       def install
         bin.install "gotlsaflare"
@@ -18,7 +18,7 @@ class Gotlsaflare < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/Stenstromen/gotlsaflare/releases/download/v2.7.0-test.2/gotlsaflare_Darwin_arm64.tar.gz"
-      sha256 "c7cb5c2ad666d33c1c7c12b0cbafd0320f96708e6badd7c65dc52a3999ff43db"
+      sha256 "7bdaeb6922f722d7071a10c49aaeb81aa39a82a6416ea82d15f3d6c16e41325c"
 
       def install
         bin.install "gotlsaflare"
@@ -30,7 +30,7 @@ class Gotlsaflare < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/Stenstromen/gotlsaflare/releases/download/v2.7.0-test.2/gotlsaflare_Linux_x86_64.tar.gz"
-        sha256 "f2ba9c2c5fa33962d7c1f68dc8b037127d61bc67c8b540fbec007acce0866fc8"
+        sha256 "cb90e182b73e6f3a2db21f0422e271efd1a303ea2a258e1aaa57aefbd23fd291"
 
         def install
           bin.install "gotlsaflare"
@@ -40,7 +40,7 @@ class Gotlsaflare < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/Stenstromen/gotlsaflare/releases/download/v2.7.0-test.2/gotlsaflare_Linux_arm64.tar.gz"
-        sha256 "0cadc87c97b3cc2ae1162cd6a85aefc80f822a3199b0a8c3729b9255e5fa5e30"
+        sha256 "860cb7e2a56388167b3b073e2c14db3efaa0a6a54d77588f21c86014eb50bd47"
 
         def install
           bin.install "gotlsaflare"
