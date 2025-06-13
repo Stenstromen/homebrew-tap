@@ -5,20 +5,20 @@
 class KubectlMscale < Formula
   desc "Scale resources across multiple namespaces"
   homepage "https://github.com/Stenstromen/kubectl-mscale"
-  version "0.0.0"
+  version "0.0.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/kubectl-mscale/releases/download/v0.0.0/kubectl-mscale_Darwin_x86_64.tar.gz"
-      sha256 "e8d66d7e6f9838428e025482637afc186ab5f6268710b89400c2344c388ba152"
+      url "https://github.com/Stenstromen/kubectl-mscale/releases/download/v0.0.1/kubectl-mscale_Darwin_x86_64.tar.gz"
+      sha256 "470a4c94ec7a462716fff5bb8bbce5c22887848dbf9d11f3064c3de29bed1df3"
 
       def install
         bin.install "kubectl-mscale"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Stenstromen/kubectl-mscale/releases/download/v0.0.0/kubectl-mscale_Darwin_arm64.tar.gz"
-      sha256 "25a330bd8f9dd8554cad4c7f299051634a45f29afb4708b59c1a1e0411f2b8c2"
+      url "https://github.com/Stenstromen/kubectl-mscale/releases/download/v0.0.1/kubectl-mscale_Darwin_arm64.tar.gz"
+      sha256 "77fcbeadda1dfed3e2a29b4166a3b6ddcf7b5ca606ed9adc2a0a72f451d65657"
 
       def install
         bin.install "kubectl-mscale"
@@ -28,15 +28,15 @@ class KubectlMscale < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/Stenstromen/kubectl-mscale/releases/download/v0.0.0/kubectl-mscale_Linux_x86_64.tar.gz"
-      sha256 "d8da1f0204c76e4556125ca82672b8346d25bcb14dd307d47bd7cca5aacd20f2"
+      url "https://github.com/Stenstromen/kubectl-mscale/releases/download/v0.0.1/kubectl-mscale_Linux_x86_64.tar.gz"
+      sha256 "505bb9e6c3a68f038c699d4dc4bccc2fa3198cdc2c6938e4d3caa8d795b1344a"
       def install
         bin.install "kubectl-mscale"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/Stenstromen/kubectl-mscale/releases/download/v0.0.0/kubectl-mscale_Linux_arm64.tar.gz"
-      sha256 "b67437a0052ac098c40f22e79edc473c092f29ee3073056eb577e3b7da6c9bd6"
+      url "https://github.com/Stenstromen/kubectl-mscale/releases/download/v0.0.1/kubectl-mscale_Linux_arm64.tar.gz"
+      sha256 "67bdd3f0633e9df511eb842764891185fdc6155c2adde987e8aed6d704a6a7f1"
       def install
         bin.install "kubectl-mscale"
       end
