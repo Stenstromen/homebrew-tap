@@ -1,6 +1,6 @@
 # typed: false
 # frozen_string_literal: true
-class Video2Gif < Formula
+class Video2gif < Formula
   desc "A comprehensive bash script that converts video files to optimized GIFs using ffmpeg and gifsicle"
   homepage "https://github.com/Stenstromen/video2gif"
   version "v0.0.0"
