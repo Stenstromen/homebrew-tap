@@ -5,20 +5,20 @@
 class Gotlsaflare < Formula
   desc "Go binary for updating TLSA DANE record on cloudflare from x509 Certificate"
   homepage "https://github.com/Stenstromen/gotlsaflare"
-  version "2.7.2"
+  version "2.7.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/gotlsaflare/releases/download/v2.7.2/gotlsaflare_Darwin_x86_64.tar.gz"
-      sha256 "56b965a5441baf56081f18816e08f2c7bf9e3a6db8078ed6fa118619f2150f38"
+      url "https://github.com/Stenstromen/gotlsaflare/releases/download/v2.7.3/gotlsaflare_Darwin_x86_64.tar.gz"
+      sha256 "2d4fdec63b5c80fe05e93494868714449b1524cdce8f2277b267bbc11fd91b7b"
 
       def install
         bin.install "gotlsaflare"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Stenstromen/gotlsaflare/releases/download/v2.7.2/gotlsaflare_Darwin_arm64.tar.gz"
-      sha256 "da355d3be343e18490464918887a14099c3c4cb23bc9b232f1ccee02f944e926"
+      url "https://github.com/Stenstromen/gotlsaflare/releases/download/v2.7.3/gotlsaflare_Darwin_arm64.tar.gz"
+      sha256 "ab8d0fbe7971d980279935b5f39b857c1ecd21393983c31ac86dd71e45848543"
 
       def install
         bin.install "gotlsaflare"
@@ -28,15 +28,15 @@ class Gotlsaflare < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/Stenstromen/gotlsaflare/releases/download/v2.7.2/gotlsaflare_Linux_x86_64.tar.gz"
-      sha256 "2004153a5452207da814a2c0d20433b54ad42c8099142ac5abf9b94da050d62d"
+      url "https://github.com/Stenstromen/gotlsaflare/releases/download/v2.7.3/gotlsaflare_Linux_x86_64.tar.gz"
+      sha256 "576f376696003bb8f20de15e3ff492717bef40636a1d1532b8098e0af8046436"
       def install
         bin.install "gotlsaflare"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/Stenstromen/gotlsaflare/releases/download/v2.7.2/gotlsaflare_Linux_arm64.tar.gz"
-      sha256 "60d8a2e10b824f868b83fa638beb8fa00e8a11e92be2f4717e9dc1bec4d26359"
+      url "https://github.com/Stenstromen/gotlsaflare/releases/download/v2.7.3/gotlsaflare_Linux_arm64.tar.gz"
+      sha256 "d7233d439e4813f9c62a039d0a5b9f588e227cde911a34f055d735e3fcd591c8"
       def install
         bin.install "gotlsaflare"
       end
