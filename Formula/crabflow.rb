@@ -3,20 +3,20 @@
 class Crabflow < Formula
   desc "Fetch Current Local Outside Temperature In the Terminal"
   homepage "https://github.com/Stenstromen/crabflow"
-  version "v0.1.2"
+  version "v0.1.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Stenstromen/crabflow/releases/download/v0.1.2/crabflow_Darwin_arm64.tar.gz"
-      sha256 "629acc3ad0ad649e88999021e1b494091734a7e63e059cdefd328c20944a0b2e"
+      url "https://github.com/Stenstromen/crabflow/releases/download/v0.1.3/crabflow_Darwin_arm64.tar.gz"
+      sha256 "2875c8ae2653f55c3a8fb2f67a32079b1e6aeaa7a95aea94cd68ffd273bc5c83"
 
       def install
         bin.install "crabflow"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/crabflow/releases/download/v0.1.2/crabflow_Darwin_x86_64.tar.gz"
-      sha256 "382c49926bc19415e73dd8e9a461e882f2561f61b87a63be19df09e8ac65e8db"
+      url "https://github.com/Stenstromen/crabflow/releases/download/v0.1.3/crabflow_Darwin_x86_64.tar.gz"
+      sha256 "5b5ff7b9b57b8334bf542b3edb21a310fb1e5b12fa0200cd52abbec20140fdca"
 
       def install
         bin.install "crabflow"
@@ -27,7 +27,7 @@ class Crabflow < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Stenstromen/crabflow/releases/download/v0.1.2/crabflow_Linux_arm64.tar.gz"
+      url "https://github.com/Stenstromen/crabflow/releases/download/v0.1.3/crabflow_Linux_arm64.tar.gz"
       sha256 ""
 
       def install
@@ -35,8 +35,8 @@ class Crabflow < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/crabflow/releases/download/v0.1.2/crabflow_Linux_x86_64.tar.gz"
-      sha256 "51d52f4cb24c51580367e031c21097d06f27707ffaac8c4a1070d005adc0aaba"
+      url "https://github.com/Stenstromen/crabflow/releases/download/v0.1.3/crabflow_Linux_x86_64.tar.gz"
+      sha256 "ec88eb2d520d4760ca58d247eff7ac963ffed76bc776cb1c12aacde1c37f8a47"
 
       def install
         bin.install "crabflow"
