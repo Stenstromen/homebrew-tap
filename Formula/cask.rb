@@ -5,20 +5,20 @@
 class Cask < Formula
   desc "Cloudflare ASK (CASK) is a Go binary for asking Cloudflare Workers AI (Llama 3.1 8B Instruct) for shell command suggestions, git command suggestions, or quick answers to general technical questions, straight from the terminal."
   homepage "https://github.com/Stenstromen/cask"
-  version "0.0.0"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/cask/releases/download/v0.0.0/cask_Darwin_x86_64.tar.gz"
-      sha256 "200d258164c08153726c01b2a7261aa2d27209dcbd0c46dc433a75c20884d22c"
+      url "https://github.com/Stenstromen/cask/releases/download/v0.1.0/cask_Darwin_x86_64.tar.gz"
+      sha256 "3d379462baa4b0ffab1e9f2ad24ee3edbf22e297daa4bc2d6437563a9884c9bf"
 
       define_method(:install) do
         bin.install "cask"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Stenstromen/cask/releases/download/v0.0.0/cask_Darwin_arm64.tar.gz"
-      sha256 "649ef39e9cdab85421bf4e8f4ee902ee3e1bf115a6bd83642a2ac25b0cd0e8dd"
+      url "https://github.com/Stenstromen/cask/releases/download/v0.1.0/cask_Darwin_arm64.tar.gz"
+      sha256 "9ecddbb8a467ac5e85e5c69efb5966aabd76a8fa8137038e6df0bf5f62e1d4e0"
 
       define_method(:install) do
         bin.install "cask"
@@ -28,15 +28,15 @@ class Cask < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Stenstromen/cask/releases/download/v0.0.0/cask_Linux_x86_64.tar.gz"
-      sha256 "5d7d932a3a0f0a5637e7bc71e69a261ca37c74417bd34afc61cc71c3943eba9f"
+      url "https://github.com/Stenstromen/cask/releases/download/v0.1.0/cask_Linux_x86_64.tar.gz"
+      sha256 "0b1910f100c8be669c2bb754f872c86829338b2b9dcb775bbb2a61c52c6a14d0"
       define_method(:install) do
         bin.install "cask"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Stenstromen/cask/releases/download/v0.0.0/cask_Linux_arm64.tar.gz"
-      sha256 "619a5e77416848b7bd02ae5e6659bdb17611f0479edc81da3d8e5d56eed132a0"
+      url "https://github.com/Stenstromen/cask/releases/download/v0.1.0/cask_Linux_arm64.tar.gz"
+      sha256 "2f87bda17ab22f3150081d5ab0b843195e4e136503dd8b3afdb23fb11a0a3ae7"
       define_method(:install) do
         bin.install "cask"
       end
