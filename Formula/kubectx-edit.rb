@@ -3,20 +3,20 @@
 class KubectxEdit < Formula
   desc "Small software utility to efficiently manage multiple kubeconfig contexts"
   homepage "https://github.com/Stenstromen/kubectx-edit"
-  version "v0.1.1"
+  version "v0.1.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Stenstromen/kubectx-edit/releases/download/v0.1.1/kubectx-edit_Darwin_arm64.tar.gz"
-      sha256 "d32b225d63e25b606ba7b4d7e5d898a6b3e6cb361b97de0a12004cdba8b6d863"
+      url "https://github.com/Stenstromen/kubectx-edit/releases/download/v0.1.2/kubectx-edit_Darwin_arm64.tar.gz"
+      sha256 "e832dcdf7142958b3cfe2ebaa61ca5e1bd921d10b72ead29bc7fc008178b9ab7"
 
       def install
         bin.install "kubectx-edit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/kubectx-edit/releases/download/v0.1.1/kubectx-edit_Darwin_x86_64.tar.gz"
-      sha256 "f395854d9b4e91a37148ab4d32e909a6188d35dcc8129e4e74de8777b00e3344"
+      url "https://github.com/Stenstromen/kubectx-edit/releases/download/v0.1.2/kubectx-edit_Darwin_x86_64.tar.gz"
+      sha256 "2543564cc817699d9bd4931f3f014f935bb5780d5b61ff83f1133287e108ed24"
 
       def install
         bin.install "kubectx-edit"
@@ -27,16 +27,16 @@ class KubectxEdit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Stenstromen/kubectx-edit/releases/download/v0.1.1/kubectx-edit_Linux_arm64.tar.gz"
-      sha256 "1c4decc740214046b1a4b39714f3331674992d73157535688e054bba973cdd44"
+      url "https://github.com/Stenstromen/kubectx-edit/releases/download/v0.1.2/kubectx-edit_Linux_arm64.tar.gz"
+      sha256 "9ab4c2c5ec2e81350fbbf9e3ce1068dd21485b2b5ea1bda482d4e8c44703f445"
 
       def install
         bin.install "kubectx-edit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Stenstromen/kubectx-edit/releases/download/v0.1.1/kubectx-edit_Linux_x86_64.tar.gz"
-      sha256 "a4b6fa6c82d8db2acdf559bb0053079bdc90fa5cebca3369d435583f053aa8b0"
+      url "https://github.com/Stenstromen/kubectx-edit/releases/download/v0.1.2/kubectx-edit_Linux_x86_64.tar.gz"
+      sha256 "e1bbba8eb3566679461c38d80eb2b76e1a3ef999f167d7daa37bdcd755cc43a6"
 
       def install
         bin.install "kubectx-edit"
