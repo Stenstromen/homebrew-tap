@@ -7,7 +7,7 @@ cask "switchboard" do
   desc "SSH tunnel manager around OpenSSH"
   homepage "https://github.com/Stenstromen/switchboard"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
 
   app "Switchboard.app"
 
