@@ -1,6 +1,6 @@
 cask "switchboard" do
-  version "0.0.0"
-  sha256 "0dcf8196e252ba8da55b2dcb7f5da896564fb027649f20bae2a47ee9b630592f"
+  version "0.1.0"
+  sha256 "e0723e3adeea9f00ec372e0db862defa57d15af09ea1346fd6ae51f98005a5bc"
 
   url "https://github.com/Stenstromen/switchboard/releases/download/v#{version}/Switchboard-#{version}.dmg"
   name "Switchboard"
